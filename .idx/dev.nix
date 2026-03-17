@@ -30,9 +30,7 @@
     workspace = {
       # Runs when a workspace is first created
       onCreate = {
-        # Example: install JS dependencies from NPM
-        # npm-install = "npm install";
-        # Open editors for the following files by default, if they exist:
+        install-claude = "npm install -g @anthropic-ai/claude-code";
         default.openFiles = [ "style.css" "main.js" "index.html" ];
       };
       # Runs when the workspace is (re)started
