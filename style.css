@@ -59,19 +59,27 @@ body {
   background: linear-gradient(90deg, transparent 0%, var(--gold) 40%, var(--gold) 60%, transparent 100%);
 }
 
-.hero-floral {
-  width: 220px;
+.hero-art {
+  display: block;
+  width: auto;
+  height: 160px;
+  object-fit: contain;
   opacity: 0;
-  animation: fadeIn 1.4s ease forwards;
+  mix-blend-mode: multiply;
+  animation: fadeIn 1.6s ease forwards;
+  pointer-events: none;
+  user-select: none;
 }
 
-.hero-floral.top {
-  margin-bottom: 20px;
+.hero-art.top {
+  margin-bottom: 24px;
+  height: 170px;
   animation-delay: 0.2s;
 }
 
-.hero-floral.bottom {
-  margin-top: 20px;
+.hero-art.bottom {
+  margin-top: 28px;
+  height: 130px;
   animation-delay: 0.4s;
 }
 
@@ -194,6 +202,15 @@ section {
   color: var(--gold);
 }
 
+.ornament-art {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  opacity: 0.85;
+  mix-blend-mode: multiply;
+  flex-shrink: 0;
+}
+
 
 /* =====================
    Message
@@ -201,6 +218,29 @@ section {
 .message {
   background: white;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.message-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  max-width: 520px;
+  height: auto;
+  opacity: 0.10;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.message > .ornament,
+.message > .message-text {
+  position: relative;
+  z-index: 1;
 }
 
 .message-text {
