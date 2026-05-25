@@ -1,7 +1,7 @@
 // =====================
 // Countdown Timer
 // =====================
-const WEDDING_DATE = new Date('2026-07-04T18:00:00');
+const WEDDING_DATE = new Date('2026-07-04T18:30:00');
 
 function pad(n) {
   return String(n).padStart(2, '0');
