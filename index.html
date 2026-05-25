@@ -160,19 +160,97 @@
   <!-- Account -->
   <section class="account fade-in">
     <h3 class="section-title">마음 전하실 곳</h3>
-    <div class="account-item">
-      <div>
-        <p class="account-label">신랑측 · 우리은행</p>
-        <p class="account-number">1002-838-132764</p>
-        <p class="account-holder">예금주 장목천</p>
+
+    <button type="button" class="account-reveal" onclick="toggleAccountSection(this)" aria-expanded="false" aria-controls="account-content">
+      <span class="reveal-text">계좌번호 보기</span>
+      <span class="toggle-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="6 9 12 15 18 9"/></svg>
+      </span>
+    </button>
+
+    <div id="account-content" class="account-content">
+      <div class="account-group">
+        <p class="account-group-label">신랑측</p>
+
+        <div class="account-item">
+          <div>
+            <p class="account-label">신랑 · 우리은행</p>
+            <p class="account-number">1002-838-132764</p>
+            <p class="account-holder">예금주 장목천</p>
+          </div>
+          <button class="action-btn copy" onclick="copyAccount('1002838132764')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+            </svg>
+            복사
+          </button>
+        </div>
+
+        <div class="account-item">
+          <div>
+            <p class="account-label">신랑 어머니 · SC제일은행</p>
+            <p class="account-number">261-20-021403</p>
+            <p class="account-holder">예금주 이양숙</p>
+          </div>
+          <button class="action-btn copy" onclick="copyAccount('26120021403')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+            </svg>
+            복사
+          </button>
+        </div>
       </div>
-      <button class="action-btn copy" onclick="copyAccount('1002838132764')">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
-          <rect x="9" y="9" width="13" height="13" rx="2"/>
-          <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
-        </svg>
-        복사
-      </button>
+
+      <div class="account-group">
+        <p class="account-group-label">신부측</p>
+
+        <div class="account-item">
+          <div>
+            <p class="account-label">신부 · 카카오뱅크</p>
+            <p class="account-number">3333-23-9275821</p>
+            <p class="account-holder">예금주 송혜림</p>
+          </div>
+          <button class="action-btn copy" onclick="copyAccount('3333239275821')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+            </svg>
+            복사
+          </button>
+        </div>
+
+        <div class="account-item">
+          <div>
+            <p class="account-label">신부 아버지 · 신한은행</p>
+            <p class="account-number">110-032-940466</p>
+            <p class="account-holder">예금주 송성균</p>
+          </div>
+          <button class="action-btn copy" onclick="copyAccount('110032940466')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+            </svg>
+            복사
+          </button>
+        </div>
+
+        <div class="account-item">
+          <div>
+            <p class="account-label">신부 어머니 · 신한은행</p>
+            <p class="account-number">110-486-15067</p>
+            <p class="account-holder">예금주 황정혜</p>
+          </div>
+          <button class="action-btn copy" onclick="copyAccount('11048615067')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+            </svg>
+            복사
+          </button>
+        </div>
+      </div>
     </div>
   </section>
 

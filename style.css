@@ -430,6 +430,23 @@ section {
   background: white;
 }
 
+.account-group {
+  margin-bottom: 18px;
+}
+
+.account-group:last-child {
+  margin-bottom: 0;
+}
+
+.account-group-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  color: var(--primary);
+  margin-bottom: 10px;
+  padding-left: 4px;
+  text-transform: uppercase;
+}
+
 .account-item {
   display: flex;
   align-items: center;
@@ -438,6 +455,62 @@ section {
   border-radius: 14px;
   padding: 18px 20px;
   border: 1px solid var(--border);
+}
+
+.account-item + .account-item {
+  margin-top: 10px;
+}
+
+.account-reveal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: white;
+  color: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-family: 'Gowun Dodum', sans-serif;
+  font-weight: 300;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.account-reveal:hover,
+.account-reveal:focus-visible {
+  background: var(--cream);
+  border-color: var(--gold-light);
+  color: var(--dark);
+  outline: none;
+}
+
+.toggle-icon {
+  display: inline-flex;
+  color: var(--gold);
+  transition: transform 0.3s ease;
+}
+
+.account-reveal[aria-expanded="true"] .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.account-content {
+  display: none;
+  margin-top: 18px;
+}
+
+.account.open .account-content {
+  display: block;
+  animation: slideDown 0.35s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .account-label {

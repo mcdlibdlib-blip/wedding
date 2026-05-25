@@ -34,6 +34,19 @@ setInterval(updateCountdown, 1000);
 
 
 // =====================
+// Toggle Account Section
+// =====================
+function toggleAccountSection(btn) {
+  const section = btn.closest('.account');
+  const expanded = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', String(!expanded));
+  section.classList.toggle('open', !expanded);
+  const label = btn.querySelector('.reveal-text');
+  if (label) label.textContent = expanded ? '계좌번호 보기' : '계좌번호 닫기';
+}
+
+
+// =====================
 // Copy Account Number
 // =====================
 function copyAccount(number) {
